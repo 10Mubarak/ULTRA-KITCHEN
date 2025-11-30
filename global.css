@@ -1,6 +1,9 @@
 /* global.css — Ultra-Kitchen light theme, single stylesheet */
 
 /* VARIABLES */
+/* IMPORT POPPINS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 :root {
     --bg: #fbfdff;
     --card: #ffffff;
@@ -19,7 +22,7 @@
 * {
     box-sizing: border-box;
     list-style-type: none !important;
-    font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    /* font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; */
 }
 
 html,
