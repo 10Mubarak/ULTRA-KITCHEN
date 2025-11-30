@@ -1,0 +1,636 @@
+/* global.css — Ultra-Kitchen light theme, single stylesheet */
+
+/* VARIABLES */
+:root {
+    --bg: #fbfdff;
+    --card: #ffffff;
+    --accent: #d79a00;
+    /* warm gold accent */
+    --accent-dark: #c07f00;
+    --muted: #6b7280;
+    --maxw: 1200px;
+    --radius: 14px;
+    --shadow: 0 12px 30px rgba(20, 30, 60, 0.06);
+    --glass: rgba(255, 255, 255, 0.85);
+    --text: #0f1724;
+}
+
+/* BASE */
+* {
+    box-sizing: border-box;
+    list-style-type: none !important;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased
+}
+
+.container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 1rem
+}
+
+/* HEADER */
+.header {
+    background: var(--card);
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    box-shadow: 0 4px 18px rgba(12, 20, 40, 0.03)
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit
+}
+
+.brand .logo {
+    width: 58px;
+    height: 58px;
+    border-radius: 10px;
+    object-fit: cover
+}
+
+.brand .title {
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 0.2px
+}
+
+/* desktop nav */
+.nav {
+    display: flex;
+    gap: 18px;
+    align-items: center
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-weight: 600
+}
+
+.nav a:hover {
+    background: rgba(0, 0, 0, 0.03)
+}
+
+.nav a.active {
+    color: var(--accent)
+}
+
+.cta-apply {
+    /* background: linear-gradient(90deg, var(--accent), var(--accent-dark)); */
+    color: #fff !important;
+    background-color: #D79A00;
+    padding: 8px 14px;
+    border-radius: 10px
+}
+
+.nav a.cta-apply:hover {
+    background-color: #D79A00 !important;
+    color: #fff !important;
+}
+
+/* menu button */
+.menu-btn {
+    display: none;
+    background: none;
+    border: 0;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* HERO — cinematic overlay light theme */
+.hero.cinematic {
+    position: relative;
+    height: 56vh;
+    min-height: 420px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    border-radius: 14px
+}
+
+.order-btn {
+    color: white !important;
+}
+
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    /* filter: contrast(1.02) saturate(1.03) */
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.4)); */
+    /* backdrop-filter: blur(2px) */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 48px 1rem;
+    color: var(--text);
+    max-width: 780px
+}
+
+.hero-title {
+    font-size: 2.4rem;
+    margin: 0 0 8px;
+    font-weight: 800;
+    color: white !important;
+}
+
+.hero-sub {
+    color: white;
+    margin-bottom: 16px
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 12px
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(200, 140, 30, 0.12)
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid rgba(15, 20, 30, 0.06);
+    color: var(--text)
+}
+
+/* MAIN LAYOUT */
+.section {
+    padding: 20px 0
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+    font-weight: 700
+}
+
+/* MENU GRID - big rectangular cards 16:9 feel */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+@media (max-width:1100px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width:700px) {
+    .menu-grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.menu-card {
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column
+}
+
+.menu-photo {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    overflow: hidden
+}
+
+/* 16:9 */
+.menu-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .45s cubic-bezier(.2, .9, .2, 1)
+}
+
+.menu-card:hover .menu-photo img {
+    transform: scale(1.05)
+}
+
+.menu-body {
+    padding: 14px
+}
+
+.menu-body h3 {
+    margin: 0;
+    font-size: 1.05rem
+}
+
+.menu-body p {
+    margin: 8px 0;
+    color: var(--muted)
+}
+
+.menu-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 10px
+}
+
+.price {
+    font-weight: 800;
+    color: var(--accent)
+}
+
+.qty {
+    width: 80px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(12, 20, 40, 0.06);
+    font-weight: 600;
+    text-align: center
+}
+
+/* ORDER PANEL (aside on desktop, stacked on mobile) */
+.order-panel {
+    position: sticky;
+    top: 110px;
+    max-width: 380px;
+    margin-left: auto
+}
+
+@media (max-width:980px) {
+    .order-panel {
+        position: static;
+        margin: 18px 0 0 0
+    }
+}
+
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 16px
+}
+
+.order-list {
+    min-height: 90px;
+    border-radius: 8px;
+    padding: 8px;
+    background: linear-gradient(180deg, #fbfdff, #fff);
+    border: 1px dashed rgba(12, 20, 40, 0.04)
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 6px;
+    border-bottom: 1px solid rgba(12, 20, 40, 0.03)
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    font-size: 1.15rem;
+    font-weight: 800
+}
+
+.total-amount {
+    color: var(--accent)
+}
+
+/* FOOTER */
+.site-footer {
+    padding: 26px 0;
+    margin-top: 30px
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px
+}
+
+.footer-grid h4 {
+    margin: 0 0 8px
+}
+
+.footer-nav a {
+    display: block;
+    color: var(--muted);
+    text-decoration: none;
+    margin-bottom: 6px
+}
+
+/* utils */
+.muted {
+    color: var(--muted)
+}
+
+.small {
+    font-size: 0.92rem
+}
+
+.full-width {
+    display: block;
+    width: 100%;
+    text-align: center
+}
+
+/* MOBILE NAV behavior + fadeDown animation */
+@media (max-width:768px) {
+    .menu-btn {
+        display: block
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: var(--card);
+        flex-direction: column;
+        padding: 18px 12px;
+        gap: 12px;
+        text-align: center;
+        box-shadow: 0 12px 30px rgba(12, 20, 40, 0.08);
+        z-index: 999;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity .32s ease, transform .32s ease
+    }
+
+    .nav.show {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        animation: fadeDown .32s ease forwards
+    }
+
+    .header-inner {
+        position: relative
+    }
+
+    .order-panel {
+        position: static;
+        margin-top: 18px
+    }
+}
+
+/* fadeDown */
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+/* small screens */
+@media (max-width:420px) {
+    .brand .title {
+        font-size: 1rem
+    }
+
+    .menu-body h3 {
+        font-size: 1rem
+    }
+
+    .qty {
+        width: 64px
+    }
+
+    .hero-title {
+        font-size: 1.6rem
+    }
+}
+
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-image {
+        height: 260px;
+    }
+}
+
+/* -------------------------------------------------- */
+/* ORDER PAGE — Ultra-Kitchen Checkout Styles         */
+/* -------------------------------------------------- */
+
+/* Layout grid for checkout page */
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 26px;
+    margin-top: 10px;
+}
+
+@media (max-width: 980px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ORDER SUMMARY BOX */
+.order-summary {
+    position: sticky;
+    top: 110px;
+    height: fit-content;
+}
+
+@media (max-width: 980px) {
+    .order-summary {
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+
+.order-summary h3 {
+    margin: 0 0 10px;
+}
+
+/* Checkout order list */
+#checkoutOrderList {
+    min-height: 100px;
+    background: linear-gradient(180deg, #fbfdff, #fff);
+    border: 1px dashed rgba(12, 20, 40, 0.05);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.checkout-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 6px;
+    border-bottom: 1px solid rgba(12, 20, 40, 0.04);
+}
+
+.checkout-item:last-child {
+    border-bottom: none;
+}
+
+#checkoutTotal {
+    font-weight: 800;
+    color: var(--accent);
+}
+
+/* -------------------------------------------------- */
+/* CUSTOMER FORM                                       */
+/* -------------------------------------------------- */
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.checkout-form h3 {
+    margin: 8px 0;
+}
+
+/* Inputs & textarea styled like your qty inputs */
+.checkout-form input,
+.checkout-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(12, 20, 40, 0.06);
+    font-size: 1rem;
+    font-family: inherit;
+    resize: none;
+}
+
+.checkout-form textarea {
+    min-height: 110px;
+}
+
+/* Radio buttons */
+.checkout-form .radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+/* Submit button full width */
+.checkout-form button[type="submit"] {
+    margin-top: 6px;
+    padding: 12px;
+    font-size: 1.05rem;
+}
+
+/* -------------------------------------------------- */
+/* Mobile improvements                                 */
+/* -------------------------------------------------- */
+@media (max-width: 480px) {
+
+    .checkout-form input,
+    .checkout-form textarea {
+        font-size: 0.95rem;
+    }
+}
+
+/* Additional responsive adjustments for better mobile experience */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .hero-content {
+        padding: 24px 0.5rem;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-body {
+        padding: 10px;
+    }
+}

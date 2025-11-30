@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Local Dishes — Ultra-Kitchen</title>
+    <link rel="stylesheet" href="../global.css">
+    <meta name="description" content="Ultra-Kitchen — Authentic Nigerian local dishes prepared fresh daily.">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html">
+                <img class="logo" src="../images/ultra-kitchen-logo3.jpg" alt="Ultra-Kitchen Logo">
+                <div class="title">Ultra-Kitchen</div>
+            </a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+
+            <nav class="nav" id="navMenu">
+                <a href="../index.html">Menu</a>
+                <a href="./about.html">About</a>
+                <a href="./local.html">Local</a>
+                <a href="./intercontinental.html">Intercontinental</a>
+                <a href="./drinks.html">Drinks</a>
+                <a href="./desserts.html" class="active">Desserts</a>
+                <a href="./contacts.html">Contact</a>
+                <a href="order.html" class="cta-apply">Order Now</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- HERO (Dark Local Food Theme, Not Too Dark) -->
+    <section class="category-hero">
+        <div class="container">
+            <h1>Local Meals</h1>
+            <p class="muted">Local flavours crafted with premium ingredients — served fresh, served right.</p>
+        </div>
+    </section>
+
+
+    <!-- MAIN SECTION: Local Dishes -->
+    <main class="container section" id="localMenu">
+        <h2 class="section-title">Local Specialties</h2>
+
+        <div class="menu-grid">
+
+            <!-- CARD 4 -->
+            <article class="menu-card">
+                <div class="menu-photo">
+                    <img src="../images/Image_fx (77).png" alt="Native Jollof (Palm Oil Rice)">
+                </div>
+                <div class="menu-body">
+                    <h3>Native Jollof Rice</h3>
+                    <p class="muted">Palm oil jollof with smoked fish, ponmo, and crayfish.</p>
+                    <div class="menu-meta">
+                        <div class="price" data-price="2200">₦2,200</div>
+                        <input class="qty" type="number" min="0" value="0">
+                    </div>
+                </div>
+            </article>
+
+            <!-- CARD 6 -->
+            <article class="menu-card">
+                <div class="menu-photo">
+                    <img src="../images/Image_fx (79).png" alt="Fried Rice with Chicken">
+                </div>
+                <div class="menu-body">
+                    <h3>Fried rice with Chicken</h3>
+                    <p class="muted">Seasoned Fried rice with a very delicious taste</p>
+                    <div class="menu-meta">
+                        <div class="price" data-price="2600">₦2,600</div>
+                        <input class="qty" type="number" min="0" value="0">
+                    </div>
+                </div>
+            </article>
+
+            <!-- CARD 1 -->
+            <article class="menu-card">
+                <div class="menu-photo">
+                    <img src="../images/amala-dudu.jpg" alt="Amala Dudu and Egusi with Beef">
+                </div>
+                <div class="menu-body">
+                    <h3>Amala Dudu & Egusi with Beef</h3>
+                    <p class="muted">Soft amala dudu served with rich egusi soup and tender, well-seasoned beef.</p>
+                    <div class="menu-meta">
+                        <div class="price" data-price="3000">₦3,000</div>
+                        <input class="qty" type="number" min="0" value="0">
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- CARD 2 -->
+            <article class="menu-card">
+                <div class="menu-photo">
+                    <img src="../images/eba-yellow-with-efo.jpg" alt="Eba Yellow and Efo Riro with Ponmo">
+                </div>
+                <div class="menu-body">
+                    <h3>Eba Yellow & Efo Riro with Ponmo</h3>
+                    <p class="muted">Delicious yellow garri eba paired with rich efo riro and soft, flavorful ponmo.</p>
+                    <div class="menu-meta">
+                        <div class="price" data-price="2500">₦2,500</div>
+                        <input class="qty" type="number" min="0" value="0">
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- CARD 3 -->
+            <article class="menu-card">
+                <div class="menu-photo">
+                    <img src="../images/Fufu-and-efor-riro.avif" alt="Iyan and Efo Riro">
+                </div>
+                <div class="menu-body">
+                    <h3>Iyan & Efo Riro</h3>
+                    <p class="muted">Fluffy pounded yam served with richly seasoned efo riro packed with assorted meat
+                        and fish.</p>
+                    <div class="menu-meta">
+                        <div class="price" data-price="3500">₦3,500</div>
+                        <input class="qty" type="number" min="0" value="0">
+                    </div>
+                </div>
+            </article>
+
+
+
+
+            <!-- CARD 5 -->
+            <article class="menu-card">
+                <div class="menu-photo">
+                    <img src="../images/fufu-egusi.jpg" alt="Fufu and Egusi Soup">
+                </div>
+                <div class="menu-body">
+                    <h3>Fufu & Egusi Soup</h3>
+                    <p class="muted">Soft fufu served with rich, flavorful egusi soup and assorted meats.</p>
+                    <div class="menu-meta">
+                        <div class="price" data-price="2500">₦2,500</div>
+                        <input class="qty" type="number" min="0" value="0">
+                    </div>
+                </div>
+            </article>
+
+
+
+        </div>
+
+
+        <!-- ORDER SUMMARY -->
+        <aside class="order-panel">
+            <div class="card">
+                <h3>Your Selection</h3>
+
+                <div class="order-list" aria-live="polite">
+                    <p class="muted">Adjust quantities to build your order. Total updates instantly.</p>
+                </div>
+
+                <div class="order-total">
+                    <div>Total</div>
+                    <div class="total-amount">₦<span id="totalAmount">0</span></div>
+                </div>
+
+                <a href="order.html" class="btn btn-primary full-width">Proceed to Checkout</a>
+            </div>
+        </aside>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>Ultra-Kitchen</h4>
+                <p class="muted small">Local favourites prepared with passion.</p>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <nav class="footer-nav">
+                    <a href="../index.html">Menu</a>
+                    <a href="./about.html">About</a>
+                    <a href="./local.html">Local</a>
+                    <a href="./intercontinental.html">Intercontinental</a>
+                    <a href="./drinks.html">Drinks</a>
+                    <a href="./desserts.html" class="active">Desserts</a>
+                    <a href="./contacts.html">Contact</a>
+                </nav>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p class="muted small">Phone: +234 700 000 0000</p>
+                <p class="muted small">Email: orders@ultrakitchen.example</p>
+            </div>
+        </div>
+
+        <div class="container copyright">
+            <small>© <span class="year"></span> Ultra-Kitchen</small>
+        </div>
+    </footer>
+
+    <script src="../global.js" defer></script>
+</body>
+
+</html>
