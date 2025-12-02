@@ -161,3 +161,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+
+
+
+// image animations
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".menu-photo img");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, {
+        threshold: 0.3
+    });
+
+    items.forEach(img => observer.observe(img));
+});
+
+
+
