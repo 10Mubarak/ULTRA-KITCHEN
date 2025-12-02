@@ -183,4 +183,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// Observe all menu cards for scroll animation
+const cardObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            cardObserver.unobserve(entry.target); // animate only once
+        }
+    });
+}, { threshold: 0.25 });
+
+document.querySelectorAll('.menu-card').forEach(card => {
+    cardObserver.observe(card);
+});
+
+
+
 
